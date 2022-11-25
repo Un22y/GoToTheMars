@@ -1,0 +1,14 @@
+{
+  "name": "tr3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

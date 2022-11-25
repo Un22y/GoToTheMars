@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Museo Sans 300 Light';
+    background-color: rgba(255, 255, 255, 1);
+    background-image: url(/images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+@font-face {
+    font-family: 'Museo Sans 300 Light';
+    src: url('MuseoSansCyrl-300.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+.navigation {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/*Logo decoration start*/
+
+.top-left-corner, .top-right-corner, .bottom-left-corner, .bottom-right-corner {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+
+.top-left-corner {
+    top: 0;
+    left: 0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+
+}
+.top-right-corner {
+    top: 0;
+    right: 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+
+}
+.bottom-left-corner {
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+
+}
+.bottom-right-corner {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+/*Logo decoration end*/
+
+
+/* About section and start-button decoration */
+.about {
+    margin-top: 70px;
+}
+
+.about-grid {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.644);
+}
+
+.text-big {
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+}
+
+.about-item {
+    cursor:pointer;
+    width: 150px;
+    height: 150px;
+}
+/* About-item gradients START*/
+.top-left {
+    background: linear-gradient(-45deg, rgba(255,255,255,0.05), rgba(0,0,0,0));
+    transition: .5s;
+}
+
+.top-left:hover {
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+}
+
+.top-right {
+    background: linear-gradient(45deg, rgba(255,255,255,0.05), rgba(0,0,0,0));
+    transition: .5s;
+}
+
+.top-right:hover {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+}
+
+.bottom-left {
+    color: rgba(255, 255, 255, 0.644);
+    cursor:pointer;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(-135deg, rgba(255,255,255,0.05), rgba(0,0,0,0));
+    transition: .5s;
+}
+
+.bottom-left:hover {
+    background: linear-gradient(-135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+}
+
+.bottom-right {
+    color: rgba(255, 255, 255, 0.644);
+    cursor:pointer;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(0,0,0,0));
+    transition: .5s;
+}
+
+.bottom-right:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+}
+
+/* About-item gradients END*/
+
+
+/* Start-button decoration START*/
+
+.start-button {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.start-button:hover {
+    color: rgb(40,93,158);
+    box-shadow: 0 0 10px rgb(40,93,158);
+}
+
+.button-line {
+    display: block;
+    position: absolute;
+}
+
+.button-line--top {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent,rgb(40,93,158));
+    transition: 1s;
+    transition-delay: .25s;
+}
+
+.start-button:hover .button-line--top {
+    left: 100%;
+}
+
+.button-line--bottom {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(-90deg, transparent,rgb(40,93,158));
+    transition: 1s;
+    transition-delay: .75s;
+}
+
+.start-button:hover .button-line--bottom {
+    right: 100%;
+}
+
+.button-line--left {
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, rgb(40,93,158), transparent);
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+.start-button:hover .button-line--left {
+    bottom: 100%;
+}
+
+.button-line--right {
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(-180deg, transparent,rgb(40,93,158));
+    transition: 1s;
+    transition-delay: .5s;
+}
+
+.start-button:hover .button-line--right {
+    top: 100%;
+}
+
+/* Start-button decoration END*/
+
+
+/*Adaptive*/
+
+
+@media screen and (max-width:1400px) {
+    .about-item {
+        width: 130px;
+        height: 130px;
+    }
+    .big {
+        font-size: 35px;
+    }
+    .about {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    body {
+        background-image: url(/images/bg-small.png);
+    }
+    .about {
+        margin-top: 180px;
+    }
+}
